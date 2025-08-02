@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Riser - Premium Vehicles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: 
+                /* linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), */
+                url('./IMAGES/CAR3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            /* margin-left: 50px; */
+            /* margin-right: 50px; */
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 204, 0, 0.2) 0%, transparent 30%);
+            animation: pulse 8s infinite alternate;
+           
+        }
+        .max-w-2xl {
+            margin-right: 100px;
+        }
+        
+        .car-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .car-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+        
+        .car-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
+        
+        .car-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(234, 179, 8, 0.9);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 2;
+        }
+        
+        .benefit-divider {
+            position: relative;
+        }
+        
+        .benefit-divider:before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+            width: 2px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+            
+            .benefit-divider:before {
+                display: none;
+            }
+        }
+        .nav {
+             list-style-type: none;
+             
+    
+        }
+        .nav a::after{
+            
+        }
+        .dropdown:hover  .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: #000000;
+        color: #fff;
+        min-width: 160px;
+        text-align: center;
+        }
+        .dropdown-content {
+             font-size: 15px;
+             font-style:oblique;
+             padding: 5px;
+             transition: background-color 0.3s ease-in-out ;
+             
+             /* margin: 5px; */
+        }
+        .nav .dropdown-content {
+            display: none;
+            /* transition: dropdown-content 0.3s ease-in-out ; */
+               
+        }
+        
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-black text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-sm">
+                <span class="font-bold">TOLL FREE:</span> 1-800-123-4567
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-sm hover:text-yellow-400 transition">Chat with us</a>
+                <a href="#" class="text-sm hover:text-yellow-400 transition">Locate Us</a>
+                <a href="#" class="text-sm hover:text-yellow-400 transition">Brochure</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-White-800">
+                    ROAD <span class="text-yellow-600">RISER</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <nav class="nav">
+                    <li class="dropdown">
+                    <a href="#" class="text-White-800 hover:text-yellow-600 font-medium transition">Vehicles</a>
+                    <div class="dropdown-content">
+                        <a href="./IMAGES/CAR1.jpg">Renegade</a>
+                        <div class="dropdown-content">
+                        <a href="./IMAGES/CAR2.jpg">Pre LCI Compass</a>
+                        <div class="dropdown-content">
+                        <a href="./IMAGES/CAR4.jpg">Compass 4X4</a>
+                        <div class="dropdown-content">
+                        <a href="./IMAGES/CAR5.jpg">Compass 4Xe</a>
+                         <div class="dropdown-content">
+                        <a href="./IMAGES/CAR3.jpg">Renegade</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </li>
+                    </nav>
+                    <a href="offers.html" class="text-gray-800 hover:text-yellow-600 font-medium transition">Offers</a>
+                    <nav class="nav">
+                    <li class="dropdown">
+                   <a href="#" class="text-gray-800 hover:text-yellow-600 font-medium transition">Shopping Tools</a>
+                    <div class="dropdown-content">
+                        <a href="#">Research</a>
+                        <div class="dropdown-content">
+                        <a href="#">Finance And Offers</a>
+                        <div class="dropdown-content">
+                        <a href="#">Sign Up For Updates</a>
+                        <div class="dropdown-content">
+                        <a href="#">Find A Dealer</a>
+                        <div class="dropdown-content">
+                        <a href="#">Book Online</a>
+                        <div class="dropdown-content">
+                        <a href="#">Value My Car</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </li>
+                    </nav>
+                    <nav class="nav">
+                    <li class="dropdown">
+                   <a href="#" class="text-gray-800 hover:text-yellow-600 font-medium transition">Service</a>
+                    <div class="dropdown-content">
+                        <a href="#">Online Service Booking</a>
+                        <div class="dropdown-content">
+                        <a href="#">RoadSide Assistance</a>
+                        <div class="dropdown-content">
+                        <a href="#">Accessories</a>
+                        <div class="dropdown-content">
+                        <a href="#">Owner‘s Manual</a>
+                        <div class="dropdown-content">
+                        <a href="#">Warranty Information</a>
+                        <div class="dropdown-content">
+                        <a href="#">Uconnect User Manual</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </li>
+                    </nav>
+<nav class="nav">
+                    <li class="dropdown">
+                   <a href="#" class="text-gray-800 hover:text-yellow-600 font-medium transition">Riser Life</a>
+                    <div class="dropdown-content">
+                        <a href="#">Riser® Brand History</a>
+                        <div class="dropdown-content">
+                        <a href="#">Riser® Social Hub</a>
+                        <div class="dropdown-content">
+                        <a href="#">Riser® Merchandise</a>
+                        <div class="dropdown-content">
+                        <a href="#">Riser® Mission One Earth</a>
+                        <div class="dropdown-content">
+                        <a href="#">Riser® Capabilities</a>
+                        <div class="dropdown-content">
+                        <a href="#">Riser® Mobile App</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </li>
+                    </nav>
+                    <a href="dealer.html" class="text-gray-800 hover:text-yellow-600 font-medium transition">Find a Dealer</a>
+                    <a href="#" class="text-gray-800 hover:text-yellow-600 font-medium transition">Explore 360°</a>
+                    <a href="#" class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">Build & Price</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Vehicles</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Offers</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Shopping Tools</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Service</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Car Life</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Find a Dealer</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-yellow-600">Explore 360°</a>
+                <a href="#" class="block mt-2 bg-yellow-600 text-white px-4 py-2 rounded text-center hover:bg-yellow-700">Build & Price</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Street‑Smart</h2>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">WILD AT HEART</h1>
+                <p class="text-xl mb-6">TRAIL EDITION MERIDIAN RANGE STARTS AT ₹69.99 LAKH</p>
+                
+                <div class="flex flex-wrap items-center gap-4 mb-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-yellow-400 mr-2"></i>
+                        <span>ROAD RISER TRUST 3-YEAR FREE AMC</span>
+                    </div>
+                    <div class="flex items-center benefit-divider">
+                        <i class="fas fa-rupee-sign text-yellow-400 mr-2"></i>
+                        <span>₹20,000 CASH BENEFIT</span>
+                    </div>
+                    <div class="flex items-center benefit-divider">
+                        <i class="fas fa-certificate text-yellow-400 mr-2"></i>
+                        <span>5-YEAR WARRANTY</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded font-medium transition">
+                        Free Trial
+                    </button>
+                    <button class="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 rounded font-medium transition">
+                        Know More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button class="bg-yellow-600 hover:bg-yellow-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl transform hover:scale-110 transition-all duration-300">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Vehicles Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">ROAD RISER VEHICLES</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Car 1 -->
+                <div class="car-card bg-gray-50">
+                    <div class="car-badge">NEW</div>
+                    <img src="./IMAGES/CAR1.jpg" alt="Renegade" class="w-full h-48 object-cover transform hover:scale-105 transition duration-500">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Renegade</h3>
+                        <p class="text-gray-600 mb-4">Starting at ₹45.00 LAKH</p>
+                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded transition">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 2 -->
+                <div class="car-card bg-gray-50 rounded-lg overflow-hidden transition duration-300">
+                    <img src="./IMAGES/CAR2.jpg" alt="Pre LCI Compass" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pre LCI Compass</h3>
+                        <p class="text-gray-600 mb-4">Starting at ₹55.00 LAKH</p>
+                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded transition">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 3 -->
+                <div class="car-card bg-gray-50 rounded-lg overflow-hidden transition duration-300">
+                    <img src="./IMAGES/CAR4.jpg" alt="Compass 4X4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Compass 4X4</h3>
+                        <p class="text-gray-600 mb-4">Starting at ₹60.00 LAKH</p>
+                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded transition">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 4 -->
+                <div class="car-card bg-gray-50 rounded-lg overflow-hidden transition duration-300">
+                    <img src="./IMAGES/CAR5.jpg" alt="Compass 4Xe" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Compass 4Xe</h3>
+                        <p class="text-gray-600 mb-4">Starting at ₹70.00 LAKH</p>
+                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded transition">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+                <!-- Vehicles -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">VEHICLES</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Renegade</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Pre LCI Compass</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Compass 4X4</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Compass 4Xe</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Research -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">RESEARCH</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Build & Price</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Get a Brochure</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Sign Up for Updates</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Corporate Enquiries</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Locate -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">LOCATE</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Find a Dealer</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Schedule a Test Drive</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Value my Car</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Brand Enthusiasts -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BRAND ENTHUSIASTS</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Sign Up for Car Life</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Social Hub</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">History</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Commercials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Partner With Us -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">PARTNER WITH US</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Dealership Enquiry</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Follow Us -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">FOLLOW US</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm mb-4 md:mb-0">© 2025 CarBrand India Private Limited</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-sm hover:text-yellow-400 transition">Privacy Policy</a>
+                        <a href="#" class="text-sm hover:text-yellow-400 transition">Terms of Use</a>
+                        <a href="#" class="text-sm hover:text-yellow-400 transition">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <p class="text-xs mt-6 text-gray-400">
+                    CarBrand India Private Limited reserves the right to change without notice the colors, equipment specifications, prices and models. Accessories shown in the pictures and features mentioned may not be a part of the standard equipment and could differ with variants. Actual colour of vehicle and upholstery might differ. Images are for illustration purpose only. All products offered in India are right hand drive vehicles.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add keyframes for animations
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes pulse {
+                0% { opacity: 0.3; }
+                100% { opacity: 0.7; }
+            }
+            
+            .testimonial-card {
+                perspective: 1000px;
+            }
+            
+            .testimonial-card:hover .front {
+                transform: rotateY(180deg);
+            }
+            
+            .testimonial-card .front {
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

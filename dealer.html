@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealer Locator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    .top-bar {
+      background-color: #000;
+      padding: 10px 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .top-bar label {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+    .top-bar select,
+    .top-bar input {
+      padding: 6px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .top-bar button {
+      background-color: #3e6257;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .main {
+      display: flex;
+      height: calc(100vh - 50px);
+    }
+    .left-panel {
+      width: 40%;
+      overflow-y: auto;
+      padding: 0;
+    }
+    .result-header {
+      background-color: #f4f4f4;
+      padding: 12px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+    .dealer-box {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .dealer-box h3 {
+      margin-top: 0;
+    }
+    .dealer-box p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .dealer-box a {
+      color: #0000ee;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+    .map {
+      width: 60%;
+    }
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <label for="search-method">Find A Dealer By</label>
+    <select id="search-method">
+      <option value="zip">ZIP Code</option>
+    </select>
+    <input type="text" placeholder="ZIP Code">
+    <button>UPDATE MATCHES</button>
+  </div>
+
+  <div class="main">
+    <div class="left-panel">
+      <div class="result-header">71 RESULTS FOUND BASED ON YOUR SEARCH CRITERIA</div>
+      <div class="dealer-box">
+        <h3>Landmark Riser - Showroom</h3>
+        <p>Ground floor, D wing, Shivsagar Estate, Dr Annie Besant Road,<br>Worli Mumbai, Maharashtra 400018</p>
+        <p><strong>Phone:</strong> 7045877737, 8291914928</p>
+        <p><strong>Email:</strong> crmservice.ggn@landmarkriser.in</p>
+        <p><strong>Opening Hours:</strong> Monday to Saturday - 09:00 AM - 06:30 PM</p>
+        <p><a href="#" target="_blank">VIEW DEALER WEBSITE</a></p>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609935695!2d72.74109934101753!3d19.08219783817832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce32004c26a5%3A0x1b6a3b53c5a73f75!2sLandmark%20Jeep!5e0!3m2!1sen!2sin!4v1691166781234!5m2!1sen!2sin" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
